@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Search Imagen</title>
+</head>
+<body data-scroll="false">
+   <section class="content-search" data-status="false" id="content-search">
+        <h1>Busca tu imagen</h1>
+
+        <div class="buscador">
+            <form id="form-search" >
+                <input type="text" placeholder="Busca imagenes" id="search">
+                <button type="submit"><span class="iconify" data-icon="ant-design:search-outlined"></span></button>
+            </form>
+            
+
+            <div class="content-tendencias" data-id="tendencias">
+                <div id="busqueda-reciente" data-id="tendencias" data-status="false">
+                    <h5 data-id="tendencias">Búsquedas recientes <span class="iconify" data-icon="akar-icons:circle-x-fill" id="delete-reciente"></span></h5>
+                    <div class="recientes-flex" data-id="tendencias"></div>
+                </div>
+                <div id="tendencias" data-id="tendencias">
+                    <h5 data-id="tendencias">Temas que son tendencia</h5>
+                    <div class="tendencias-grid" data-id="tendencias"></div>
+                </div>
+            </div>
+
+        </div>
+
+   </section>
+   
+   <section class="result" id="result"></section>
+
+   <div class="openImg">
+        <button id="closeImg"><span class="iconify" data-icon="cil:x"></span></button>
+        <a href="" target="_blank"  rel="noopener noreferrer" download>Descargar imagen</a>
+        <div class="imgContent"></div>
+
+
+   </div>
+   <div class="back"></div>
+</body>
+<script src="main.js" type="module"></script>
+<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+</html>
