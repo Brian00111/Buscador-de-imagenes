@@ -28,9 +28,9 @@ let observable = new IntersectionObserver(
 );
 
 export default class api {
-  constructor(param, pagina) {
+  constructor(param, pagina = 1) {
     this.key = `yrMFM7rIhQCG1HmhVRu7XaEl35vWIerw1XrhIquUoIU`;
-    this.url = `https://api.unsplash.com/search/photos?query=${param}&page=${pagina}&client_id=${this.key}`;
+    this.url = `https://api.unsplash.com/search/photos?page=${pagina}&query=${param}&client_id=${this.key}`;
   }
   async buscar() {
     let result = document.querySelector("#result");
@@ -43,7 +43,7 @@ export default class api {
       return;
     }
 
-    if (contentResult.dataset.status === "true") {
+    if (result.dataset.status === "true") {
       [...contentResult.children].map((element) =>
         contentResult.removeChild(element)
       );
@@ -52,6 +52,7 @@ export default class api {
     response.results.map((item) => this.pintar(item, result));
 
     contentSearch.dataset.status = true;
+    result.dataset.status = true;
 
     this.seguir();
   }
